@@ -1,1 +1,1 @@
-pip install javasphinx
+pip install -r javasphinx
