@@ -1,1 +1,1 @@
-javasphinx==1.0
+javasphinx
