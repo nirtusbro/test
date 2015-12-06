@@ -1,1 +1,1 @@
-pip install -r javasphinx
+pip install -r requirements.txt
