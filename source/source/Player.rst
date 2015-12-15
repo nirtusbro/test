@@ -22,9 +22,7 @@ Player
 .. java:constructor:: public Player(String name)
    :outertype: Player
 
-   Konstruktor
-
-   :param name: Inicijalizacija imena
+   :param name: Name initialization
 
 Methods
 -------
@@ -34,9 +32,9 @@ addFigure
 .. java:method:: public void addFigure(IFigure figure)
    :outertype: Player
 
-   Dodavanje figure
+   Adds a figure
 
-   :param figure: Zadata figura
+   :param figure: Figure to be added
 
 getName
 ^^^^^^^
@@ -44,9 +42,9 @@ getName
 .. java:method:: @Override public String getName()
    :outertype: Player
 
-   Vraca ime igraca
+   Returns the player's name
 
-   :return: Ime igraca
+   :return: Player name
 
 removeFigure
 ^^^^^^^^^^^^
@@ -54,9 +52,9 @@ removeFigure
 .. java:method:: public void removeFigure(IFigure figure)
    :outertype: Player
 
-   Uklanjanje figure
+   Removes a figure
 
-   :param figure: Zadata figura
+   :param figure: Figure to be removed
 
 setName
 ^^^^^^^
@@ -64,7 +62,7 @@ setName
 .. java:method:: @Override public void setName(String value)
    :outertype: Player
 
-   Postavlja ime igraca
+   Sets the player's name
 
-   :param value: Zadato ime
+   :param value: Player name
 

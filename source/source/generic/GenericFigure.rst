@@ -8,7 +8,7 @@ GenericFigure
 
 .. java:type:: public class GenericFigure extends RenderableMetadataContainer implements IFigure
 
-   Created by hades-incarnate on 10/30/2015. Genericka figura koju ce nasledjivati sve buduce figure
+   Generic figure
 
 Constructors
 ------------
@@ -24,13 +24,13 @@ GenericFigure
 .. java:constructor:: public GenericFigure(String name, IPlayer player, IFigureStack figureStack, IBoardElement boardElement, IBoard board)
    :outertype: GenericFigure
 
-   Konstruktor genericke figure
+   Generic figure constructor
 
-   :param name: Ime figure
-   :param player: Vlasnik figure
-   :param figureStack: Stek figura na kome se nalazi figura
-   :param boardElement: Element table na kome se nalazi figura
-   :param board: Tabla na kojoj se nalazi figura
+   :param name: Name of the figure
+   :param player: Owner of the figure
+   :param figureStack: Figure stack to which this figure belongs to
+   :param boardElement: Board element where this figure is placed
+   :param board: The board where this figure is placed
 
 Methods
 -------
@@ -40,9 +40,9 @@ getBoard
 .. java:method:: @Override public IBoard getBoard()
    :outertype: GenericFigure
 
-   Vraca tablu na kojoj se nalazi figura
+   Returns the board which contains this figure
 
-   :return: Tabla na kojoj se nalazi figura
+   :return: Desired board
 
 getBoardElement
 ^^^^^^^^^^^^^^^
@@ -50,9 +50,9 @@ getBoardElement
 .. java:method:: @Override public IBoardElement getBoardElement()
    :outertype: GenericFigure
 
-   Vraca element table na kojoj se trenutno nalazi figura
+   Returns the board element which contains this figure
 
-   :return: Element table na kojoj se trenutno nalazi figura
+   :return: Board element which contains this figure
 
 getFigureStack
 ^^^^^^^^^^^^^^
@@ -60,9 +60,9 @@ getFigureStack
 .. java:method:: @Override public IFigureStack getFigureStack()
    :outertype: GenericFigure
 
-   Vraca stek figura na kome se nalazi figura
+   Returns the figure stack which contains this figure
 
-   :return: Stek figura na kome se nalazi figura
+   :return: Figure stack which contains this figure
 
 getName
 ^^^^^^^
@@ -70,9 +70,9 @@ getName
 .. java:method:: @Override public String getName()
    :outertype: GenericFigure
 
-   Vraca ime figure
+   Returns the figure name
 
-   :return: Ime figure
+   :return: Figure name
 
 getOwner
 ^^^^^^^^
@@ -80,9 +80,9 @@ getOwner
 .. java:method:: @Override public IPlayer getOwner()
    :outertype: GenericFigure
 
-   Vraca vlasnika figure
+   Returns the owner of this figure
 
-   :return: Vlasnik figure
+   :return: Owner of this figure
 
 setName
 ^^^^^^^
@@ -90,7 +90,7 @@ setName
 .. java:method:: @Override public void setName(String name)
    :outertype: GenericFigure
 
-   Postavlja ime figure
+   Sets the desired name of the figure
 
-   :param name: Ime figure
+   :param name: Name of the figure
 

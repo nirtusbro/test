@@ -10,7 +10,7 @@ TableBoardElement
 
 .. java:type:: public class TableBoardElement extends GenericBoardElement
 
-   Created by hades-incarnate on 11/2/2015. Kvadratni board element
+   Square board element
 
 Constructors
 ------------

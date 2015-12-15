@@ -10,7 +10,7 @@ IVisualPresentation
 
 .. java:type:: public interface IVisualPresentation
 
-   Created by hades-incarnate on 10/28/2015. This interface abstracts visual presentation from the semantics of game elements. As such, it does not define nor enforce rendering methods (shapme, image, etc) and can be hooked on different game elements (board, board element, stack, figure, etc). All that is expected from visual rpesentation is to be able to render itself in a designated area using supplied Java2D graphics object. There should be several implementations of this interface (bitmap, etc)
+   This interface abstracts visual presentation from the semantics of game elements. As such, it does not define nor enforce rendering methods (shape, image, etc) and can be hooked on different game elements (board, board element, stack, figure, etc). All that is expected from visual presentation is to be able to render itself in a designated area using supplied Java2D graphics object. There should be several implementations of this interface (bitmap, etc)
 
 Methods
 -------

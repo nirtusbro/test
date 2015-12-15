@@ -6,7 +6,7 @@ ResolutionAction
 
 .. java:type:: public class ResolutionAction
 
-   Created by hades-incarnate on 10/27/2015. Objekat koji sadrzi jednu akciju koju game engine treba da izvrsi
+   An object that contains one action which the game engine should execute
 
 Methods
 -------

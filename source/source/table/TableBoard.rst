@@ -10,7 +10,7 @@ TableBoard
 
 .. java:type:: public class TableBoard extends GenericBoard
 
-   Created by hades-incarnate on 10/30/2015. Osnova za XxY tabele (sah, XO, itd)
+   Basis for XxY tables(sah, XO, etc)
 
 Constructors
 ------------
@@ -40,7 +40,7 @@ addBoardElements
 .. java:method:: @Override public List<IBoardElement> addBoardElements(List<IBoardElement> elems)
    :outertype: TableBoard
 
-   Ovde vraca greske zbog zabranjenih metoda
+    Here it returns mistakes because of prohibited methodsds
 
 connectAllElements
 ^^^^^^^^^^^^^^^^^^
@@ -66,11 +66,11 @@ getBoardElementAt
 .. java:method:: public IBoardElement getBoardElementAt(int row, int col)
    :outertype: TableBoard
 
-   Geter za bord element na odredjenoj poziciji
+  Getter for board elements on certain position
 
-   :param row: Trazeni red
-   :param col: Trazena kolona
-   :return: Trazeni element
+   :param row: Wanted row
+   :param col: Wanted column
+   :return: Wanted element
 
 getDefaultFigureAt
 ^^^^^^^^^^^^^^^^^^
@@ -78,9 +78,9 @@ getDefaultFigureAt
 .. java:method:: public IFigure getDefaultFigureAt(int row, int col)
    :outertype: TableBoard
 
-   Geter za default figuru na odredjenoj poziciji
+  Getter for default figure on certain position
 
-   :param row: Trazeni red
-   :param col: Trazena koona
-   :return: Trazena figura
+   :param row: Wanted row
+   :param col: Wanted column
+   :return: Wanted figure
 

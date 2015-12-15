@@ -8,7 +8,7 @@ IFigureStack
 
 .. java:type:: public interface IFigureStack extends IMetadataCore, IRenderable
 
-   Created by hades-incarnate on 10/20/2015. jedan board element moze da ima vise stackova na razlicitim lokacijama, stack definise oblast i poredak figura, pri cemu se figure renderuju po internom redosledu (sortable?)
+   One board element can have several stacks at different locations, the stack defines the domain and order of figures. The figures' rendering is determined by an internal order.
 
 Methods
 -------
@@ -18,11 +18,11 @@ addFigure
 .. java:method::  IFigure addFigure(IFigure figure, String name)
    :outertype: IFigureStack
 
-   Dodavanje figure u listu
+   Adds a figure the list of figures
 
-   :param figure: Figura koja se dodaje
-   :param name: Ime figure koja se dodaje
-   :return: Dodatu figuru
+   :param figure: Figure to be added
+   :param name: Name of the figure to be added
+   :return: The added figure
 
 addFigures
 ^^^^^^^^^^
@@ -30,10 +30,10 @@ addFigures
 .. java:method::  List<IFigure> addFigures(List<IFigure> figures)
    :outertype: IFigureStack
 
-   Dodavanje liste figura u listu
+   Adds a list of figures to the list of figure lists
 
-   :param figures: Lista figura koja se dodaje
-   :return: dodate Figure
+   :param figures: List of figures to be added
+   :return: Added figures
 
 getDefaultFigure
 ^^^^^^^^^^^^^^^^
@@ -41,9 +41,9 @@ getDefaultFigure
 .. java:method::  IFigure getDefaultFigure()
    :outertype: IFigureStack
 
-   Vraca default figuru iz stacka, null ako ja nema Pod default figure se podrazumeva prvo kreirana figura na stacku. Ovo ce nam pomagati kod igrica koje imaju samo jedan stack i jednu figuru po board elementu (npr sah)
+   Returns the default figure from the stack, null if it is nonexistent. The default figure is the figure that was first created on the stack.
 
-   :return: Osnovna figura
+   :return: The default figure
 
 getFigure
 ^^^^^^^^^
@@ -51,10 +51,10 @@ getFigure
 .. java:method::  IFigure getFigure(String name)
    :outertype: IFigureStack
 
-   Uzimanje figure iz liste
+   Returns a figure specified by its name from the stack
 
-   :param name: Ime trazene figure
-   :return: Trazenu figuru
+   :param name: Name of the figure
+   :return: The required figure
 
 getFigures
 ^^^^^^^^^^
@@ -62,9 +62,9 @@ getFigures
 .. java:method::  List<IFigure> getFigures()
    :outertype: IFigureStack
 
-   Vraca figura iz liste
+   Returns the list of figures
 
-   :return: Trazene figure
+   :return: The list of figures
 
 getName
 ^^^^^^^
@@ -72,9 +72,9 @@ getName
 .. java:method::  String getName()
    :outertype: IFigureStack
 
-   Funkcija koja vraca ime figure
+   Returns the figure's name
 
-   :return: Ime figure
+   :return: Figure's name
 
 hasFigures
 ^^^^^^^^^^
@@ -82,9 +82,9 @@ hasFigures
 .. java:method::  boolean hasFigures()
    :outertype: IFigureStack
 
-   Da li sadrzi figure
+   Returns a boolean value which represents whether or not the stack has figures
 
-   :return: False ako nije prazno
+   :return: True if it has, false if it doesn't
 
 setName
 ^^^^^^^
@@ -92,7 +92,7 @@ setName
 .. java:method::  void setName(String name)
    :outertype: IFigureStack
 
-   Funkcija za postavljanje imena figure
+   Sets the figure's name
 
-   :param name: Ime figure
+   :param name: Figure's name
 

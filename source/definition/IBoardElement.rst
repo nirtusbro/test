@@ -6,7 +6,7 @@ IBoardElement
 
 .. java:type:: public interface IBoardElement extends IMetadataCore, IRenderable
 
-   Created by hades-incarnate on 10/20/2015. Jedan element board-a, renderable i sadrzi vise stackova figura
+   One board element, is renderable and contains several figure stacks
 
 Methods
 -------
@@ -22,11 +22,11 @@ addFigureStack
 .. java:method::  IFigureStack addFigureStack(IFigureStack stack, String name)
    :outertype: IBoardElement
 
-   Dodaje stek figura
+   Adds a figure stack
 
-   :param stack: Stek na koji se dodaje
-   :param name: Ime steka
-   :return: Stek koji se dodaje
+   :param stack: Figure stack to be added
+   :param name: Stack name
+   :return: The added stack
 
 addFigureStacks
 ^^^^^^^^^^^^^^^
@@ -40,11 +40,11 @@ connectTo
 .. java:method::  IBoardElement connectTo(IBoardElement target, int cost)
    :outertype: IBoardElement
 
-   Povezuje ovaj board element sa drugim
+   Connects this element with another
 
-   :param target: Odrediste veze
-   :param cost: Trosak u tom smeru
-   :return: vraca sebe, radi ulancavanje connectTo() poziva
+   :param target: Target element
+   :param cost: Cost in that direction
+   :return: The target element
 
 getAllConnectedBoardElements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -52,9 +52,9 @@ getAllConnectedBoardElements
 .. java:method::  Map<IBoardElement, Integer> getAllConnectedBoardElements()
    :outertype: IBoardElement
 
-   Svi board elementi koji su povezani za ovaj u smeru ovaj->drugi
+   Returns all the board elements that are connected
 
-   :return: Mapa povezanih elemenata i tezine puteva
+   :return: A map of connected elements
 
 getAllUnvisitedConnectedElements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -62,9 +62,9 @@ getAllUnvisitedConnectedElements
 .. java:method::  Map<IBoardElement, Integer> getAllUnvisitedConnectedElements()
    :outertype: IBoardElement
 
-   Pomoc za algoritme pretrage, vrati samo one povezane elemente gde je !isVisited()
+   Returns all the board elements that are connected and where !isVisited()
 
-   :return: Mapa neposecenih povezanih elemenata i tezine puteva
+   :return: A map of unvisited connected elements
 
 getDefaultFigure
 ^^^^^^^^^^^^^^^^
@@ -72,9 +72,9 @@ getDefaultFigure
 .. java:method::  IFigure getDefaultFigure()
    :outertype: IBoardElement
 
-   Vraca default figuru iz elementa, null ako ga nema ili element nema stackova. Pod default stack se podrazumeva prvo kreirana figura na prvo kreiranom stacku. Ovo ce nam pomagati kod igrica koje imaju samo jedan stack i jednu figuru po board elementu (npr sah)
-
-   :return: Osnovna figura
+   Returns the default figure for this element, null if it is nonexistent or the element doesn't have any stacks. The default figure is the figure that was first created on the stack that was first created.
+	
+   :return: The default figure
 
 getDefaultStack
 ^^^^^^^^^^^^^^^
@@ -82,9 +82,9 @@ getDefaultStack
 .. java:method::  IFigureStack getDefaultStack()
    :outertype: IBoardElement
 
-   Vraca default stack iz elementa, null ako ga nema. Pod default stack se podrazumeva prvo kreirani stack. Ovo ce nam pomagati kod igrica koje imaju samo jedan stack po board elementu
+   Returns the default stack, null if it is nonexistent. The default stack is the stack that was first created.
 
-   :return: Osnovni figure stack
+   :return: The default stack
 
 getFigureStacks
 ^^^^^^^^^^^^^^^
@@ -92,9 +92,9 @@ getFigureStacks
 .. java:method::  List<IFigureStack> getFigureStacks()
    :outertype: IBoardElement
 
-   Vraca stekove figura
+   Returns the figure stacks
 
-   :return: Stekovi figura
+   :return: Figure stacks
 
 getFigureStacks
 ^^^^^^^^^^^^^^^
@@ -102,10 +102,10 @@ getFigureStacks
 .. java:method::  IFigureStack getFigureStacks(String name)
    :outertype: IBoardElement
 
-   Vraca stek figura sa zadatim nazivom
+   Returns a stack figure with the given name
 
-   :param name: Naziv figure
-   :return: Stek figura
+   :param name: Figure name
+   :return: Figure stack
 
 getUniqueName
 ^^^^^^^^^^^^^
@@ -113,9 +113,9 @@ getUniqueName
 .. java:method::  String getUniqueName()
    :outertype: IBoardElement
 
-   Vraca jedinstveno ime
+   Returns the unique name
 
-   :return: Ime board elementa
+   :return: Board element name
 
 isVisited
 ^^^^^^^^^
@@ -123,9 +123,9 @@ isVisited
 .. java:method::  boolean isVisited()
    :outertype: IBoardElement
 
-   Vraca da li je element posecen
+   Returns a boolean value which represents whether or not the element is visited
 
-   :return: false ako nije, true ako jeste
+   :return: true if it is, false if it isn't
 
 setUniqueName
 ^^^^^^^^^^^^^
@@ -133,9 +133,9 @@ setUniqueName
 .. java:method::  void setUniqueName(String name)
    :outertype: IBoardElement
 
-   Postavlja jedinstveno ime board elementa. Pozeljno bi bilo da IBoard.addBoardElement validira jedistvenost
+   Sets the unique name
 
-   :param name: Ime board elementa
+   :param name: Unique name to be set
 
 setVisited
 ^^^^^^^^^^
@@ -143,7 +143,7 @@ setVisited
 .. java:method::  void setVisited(boolean visited)
    :outertype: IBoardElement
 
-   Obelezava da li je element posecen
+   Sets the element to visited, i.e. sets the boolean visited to true
 
-   :param visited: false ako nije, true ako jeste
+   :param visited: true if it is, false if it isn't
 

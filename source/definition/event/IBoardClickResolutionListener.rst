@@ -8,7 +8,7 @@ IBoardClickResolutionListener
 
 .. java:type:: public interface IBoardClickResolutionListener
 
-   Created by hades-incarante on 10/26/2015. Interfejs za event listener za kllik na tablu.
+   An interface for the event listener for clicks on the board.
 
 Methods
 -------
@@ -18,10 +18,10 @@ resolveBoardElementClick
 .. java:method::  ResolutionAction[] resolveBoardElementClick(IGameEngine gameEngine, IBoard board, Point boardCoordinates, IPlayer player, IBoardElement clickedElement, IFigureStack clickedStack, IFigure clickedFigure)
    :outertype: IBoardClickResolutionListener
 
-   Event koji game engine poziva posle svakog poteza, ocekujuci razresenje poteza. Potezi koji se dozvole postaju deo zurnala.
+   The event that the game engine calls after every move expecting a resolution for the move. Moves that areapproved become a part of the journal.
 
-   :param gameEngine: gameEngine koji kontrolise igru
-   :param board: instanca boarda na kojem se igra
-   :param player: igrac koji pomera figuru
-   :return: spisak akcija koje game engine treba da izvrsi kao posledicu ovog poteza, osnova za zurnal
+   :param gameEngine: The gameEngine which controlls the game
+   :param board: The board on which the game is played
+   :param player: The player who is moving the figure
+   :return:  A list of actions the game engine should do as a result of this move
 

@@ -6,7 +6,7 @@ IFigure
 
 .. java:type:: public interface IFigure extends IMetadataCore, IRenderable
 
-   Created by hades-incarnate on 10/20/2015. Figura koja se pomera u igri, renderable
+   The figure which is used in the game, is renderable.
 
 Methods
 -------
@@ -16,9 +16,9 @@ getBoard
 .. java:method::  IBoard getBoard()
    :outertype: IFigure
 
-   Funkcija koja vraca tablu na kojoj se nalazi figura
+   Returns the table on which this figure is on
 
-   :return: Tabla na kojoj se nalazi figura
+   :return: The table on which this figure is on
 
 getBoardElement
 ^^^^^^^^^^^^^^^
@@ -26,9 +26,9 @@ getBoardElement
 .. java:method::  IBoardElement getBoardElement()
    :outertype: IFigure
 
-   Funkcija koja vraca element table na kojoj se trenutno nalazi figura
+   Returns the table element on which this figure is on
 
-   :return: Element table na kojoj se trenutno nalazi figura
+   :return: The table element on which this figure is on
 
 getFigureStack
 ^^^^^^^^^^^^^^
@@ -36,9 +36,9 @@ getFigureStack
 .. java:method::  IFigureStack getFigureStack()
    :outertype: IFigure
 
-   Funkcija koja vraca stek figura na kome se nalazi figura
+   Returns the figure stack on which this figure is on
 
-   :return: Stek figura na kome se nalazi figura
+   :return: The figure stack on which this figure is on
 
 getName
 ^^^^^^^
@@ -46,9 +46,9 @@ getName
 .. java:method::  String getName()
    :outertype: IFigure
 
-   Funkcija koja vraca ime figure
+   Returns the figure's name
 
-   :return: Ime figure
+   :return: Figure name
 
 getOwner
 ^^^^^^^^
@@ -56,17 +56,16 @@ getOwner
 .. java:method::  IPlayer getOwner()
    :outertype: IFigure
 
-   Funkcija koja vraca vlasnika figure
+   Return the figure's owner
 
-   :return: Vlasnik figure
-
+   :return: Figure owner
 setName
 ^^^^^^^
 
 .. java:method::  void setName(String name)
    :outertype: IFigure
 
-   Funkcija za postavljanje imena figure
+   Sets the figure's name
 
-   :param name: Ime figure
+   :param name: Figure name
 

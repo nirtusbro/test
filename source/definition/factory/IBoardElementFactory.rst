@@ -10,7 +10,7 @@ IBoardElementFactory
 
 .. java:type:: public interface IBoardElementFactory
 
-   Created by hades-incarnate on 10/31/2015. Fabrika board elemenata
+   Board element factory
 
 Methods
 -------
@@ -20,9 +20,9 @@ createBoardElement
 .. java:method::  IBoardElement createBoardElement(IBoard board, Object payload)
    :outertype: IBoardElementFactory
 
-   Fabrika za kreiranje board elemenata
+   The factory for creating board elements
 
-   :param board: board na kome se kreira element
-   :param payload: custom objekat koji pomaze u kreiranju
-   :return: novi Board Element
+   :param board: The board on which the element is created
+   :param payload: A custom object that helps in creating the factory
+   :return: The new board element
 

@@ -8,7 +8,7 @@ IGameEngine
 
 .. java:type:: public interface IGameEngine
 
-   Created by hades-incarnate on 10/20/2015.
+   
 
 Methods
 -------
@@ -18,9 +18,9 @@ addBoardClickResolutionListener
 .. java:method::  void addBoardClickResolutionListener(IBoardClickResolutionListener boardClickResolutionListener)
    :outertype: IGameEngine
 
-   Metod za dodavanje listenera koji reaguje na klik misem na board
+   Adds a listener that reacts to mouse clicks on the board
 
-   :param boardClickResolutionListener: Listener koji se dodaje
+   :param boardClickResolutionListener: The listener to be added
 
 addMoveResolutionListener
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -28,9 +28,9 @@ addMoveResolutionListener
 .. java:method::  void addMoveResolutionListener(IMoveResolutionListener moveResolutionListener)
    :outertype: IGameEngine
 
-   Metod za dodavanje listenera koji reaguje na pomeranje figure na tabli
+   Adds a listener that reacts to figure moves on the board
 
-   :param moveResolutionListener: Listener koji se dodaje
+   :param moveResolutionListener: The listener to be added
 
 addPlayer
 ^^^^^^^^^
@@ -38,10 +38,10 @@ addPlayer
 .. java:method::  IPlayer addPlayer(IPlayer playerDef)
    :outertype: IGameEngine
 
-   Metod odavanje novog igraca u toku igre
+   Adds a new player during the game
 
-   :param playerDef: igrac koji se dodaje
-   :return: dodat igrac
+   :param playerDef: The player to be added
+   :return: The added player
 
 addVictoryEvaluationListener
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -49,9 +49,9 @@ addVictoryEvaluationListener
 .. java:method::  void addVictoryEvaluationListener(IVictoryEvaluationListener victoryEvaluationListener)
    :outertype: IGameEngine
 
-   Metod za dodavanje listenera koji se izvrasava na zahtev API korisnika i proverava da li ima pobednika u igri. Poziva se samo ako neki od prethodnih resolvera to zahteva u kom slucaju se na igru primenjuju sve zahtevane akcije do ove, da bi ovaj event mogao da analizira pobedu na osnovu odigranog poteza. NOTE: Ovaj event nije obavezan, bilo koji od rosolvera moze da vrati ActionEnum.DeclareVictory !
+   Adds a listener which is called by the API user and checks whether there is a winner in the game. To be called only if one of the previous resolvers requires it, in which case all the moves prior to this one are applied to the game, so that this event could determine the winner based on the move played. This event isn't mandatory, any resolver can return ActionEnum.DeclareVictory.
 
-   :param victoryEvaluationListener: Listener koji se dodaje
+   :param victoryEvaluationListener: Listener to be added
 
 removePlayer
 ^^^^^^^^^^^^
@@ -59,9 +59,9 @@ removePlayer
 .. java:method::  void removePlayer(IPlayer player)
    :outertype: IGameEngine
 
-   Metod za uklanjanje igraca
+   Removes the specified player
 
-   :param player: Igrac koji se uklanja
+   :param player: The player to be removed
 
 restartGame
 ^^^^^^^^^^^
@@ -69,7 +69,7 @@ restartGame
 .. java:method::  void restartGame() throws OperationNotSupportedException
    :outertype: IGameEngine
 
-   Metod za ponovno pokretanje igre, posle zavrsetka prosle
+   Restarts the game, after the last one is finished
 
 setupGame
 ^^^^^^^^^
@@ -77,9 +77,9 @@ setupGame
 .. java:method::  void setupGame(IGameDefinition gameDef)
    :outertype: IGameEngine
 
-   Pre pocetka igre, mora da se deklarise setup, to se radi pozivanjem ove metode.
+   Declares a setup for the game, must be called before the beggining of the game.
 
-   :param gameDef: definicija igre
+   :param gameDef: The definition of the game
 
    **See also:** :java:ref:`IGameDefinition`
 
@@ -89,5 +89,5 @@ startGame
 .. java:method::  void startGame()
    :outertype: IGameEngine
 
-   Nakon sto je igra potpuno definisana, ovde pocinje izvodjenje igre. Ovo i zapocinje render cycle
+   Start the game. To be called after the game is defined completely. Starts the render cycle.
 

@@ -6,7 +6,7 @@ ActionEnum
 
 .. java:type:: public enum ActionEnum
 
-   Created by hades-incarnate on 10/28/2015. definise vrstu akcije koju game engine treba da izvrsi
+   Defines the type of action the game engine should execute
 
 Enum Constants
 --------------

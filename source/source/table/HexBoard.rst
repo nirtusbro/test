@@ -18,7 +18,7 @@ HexBoard
 .. java:constructor:: public HexBoard(Point3D[] points, IBoardElementFactory elementFactory)
    :outertype: HexBoard
 
-   Generisanje hex table proizvoljnog oblika
+   Generating hex table of arbitary shape
 
 HexBoard
 ^^^^^^^^
@@ -26,7 +26,8 @@ HexBoard
 .. java:constructor:: public HexBoard(int size, IBoardElementFactory elementFactory)
    :outertype: HexBoard
 
-   Generisanje hex table hexagonalnog oblika
+   Generating hex table hexagonal shape
+
 
 HexBoard
 ^^^^^^^^
@@ -34,7 +35,7 @@ HexBoard
 .. java:constructor:: public HexBoard(int x, int y, layout l, IBoardElementFactory elementFactory)
    :outertype: HexBoard
 
-   Generisanje hex table kvadratnog oblika
+   Generating hex table square-shaped
 
 HexBoard
 ^^^^^^^^
@@ -68,7 +69,7 @@ addBoardElements
 .. java:method:: @Override public List<IBoardElement> addBoardElements(List<IBoardElement> elems)
    :outertype: HexBoard
 
-   Ovde vraca greske zbog zabranjenih metoda
+   Here it returns mistakes because of prohibited methodsds
 
 connectAllElements
 ^^^^^^^^^^^^^^^^^^

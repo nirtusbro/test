@@ -12,7 +12,7 @@ GenericBoardElement
 
 .. java:type:: public class GenericBoardElement extends RenderableMetadataContainer implements IBoardElement
 
-   Created by Filip Comor on 31-Oct-15. Genericki board element
+   Generic board element
 
 Constructors
 ------------
@@ -30,10 +30,10 @@ addFigureStack
 .. java:method:: @Override public IFigureStack addFigureStack(IFigureStack stack)
    :outertype: GenericBoardElement
 
-   Dodaje steka figura
+   Adds a figure stack
 
-   :param stack: Stek koji se dodaje
-   :return: Dodati stek
+   :param stack: Stack to be added
+   :return: Added stack
 
 addFigureStack
 ^^^^^^^^^^^^^^
@@ -41,11 +41,11 @@ addFigureStack
 .. java:method:: @Override public IFigureStack addFigureStack(IFigureStack stack, String name)
    :outertype: GenericBoardElement
 
-   Dodaje stek i zadaje mu ime
+   Adds a figure stack and assigns a name to it
 
-   :param stack: Stek koji se dodaje
-   :param name: Zadato ime
-   :return: Dodati stek
+   :param stack: Stack to be added
+   :param name: Assigned name
+   :return: Added stack
 
 addFigureStacks
 ^^^^^^^^^^^^^^^
@@ -53,10 +53,10 @@ addFigureStacks
 .. java:method:: @Override public List<IFigureStack> addFigureStacks(List<IFigureStack> stacks)
    :outertype: GenericBoardElement
 
-   Dodaje liste stekova figura
+   Adds lists of figure stacks
 
-   :param stacks: Stek koji se dodaje
-   :return: Dodati stek
+   :param stacks: Stack to be added
+   :return: Added stack
 
 connectTo
 ^^^^^^^^^
@@ -64,11 +64,11 @@ connectTo
 .. java:method:: @Override public IBoardElement connectTo(IBoardElement target, int cost)
    :outertype: GenericBoardElement
 
-   Spaja bord elemente
+   Connects board elements
 
-   :param target: Odrediste veze
-   :param cost: Trosak u tom smeru
-   :return: Ciljni element
+   :param target: Target element
+   :param cost: Cost in that direction
+   :return: Target element
 
 getAllConnectedBoardElements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -76,9 +76,9 @@ getAllConnectedBoardElements
 .. java:method:: @Override public Map<IBoardElement, Integer> getAllConnectedBoardElements()
    :outertype: GenericBoardElement
 
-   Geter za sve spojene bord elemente
+   Returns all connected board elements
 
-   :return: Trazene susede, tj. spojene
+   :return: Connected elements (neighbours)
 
 getAllUnvisitedConnectedElements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -86,9 +86,9 @@ getAllUnvisitedConnectedElements
 .. java:method:: @Override public Map<IBoardElement, Integer> getAllUnvisitedConnectedElements()
    :outertype: GenericBoardElement
 
-   Geter za sve neposecene a spojene bord elemente
+   Returns all unvisited but connected elements
 
-   :return: Trazene elemente, tj. susede i neposecene
+   :return: Unvisited neighbours
 
 getDefaultFigure
 ^^^^^^^^^^^^^^^^
@@ -96,9 +96,9 @@ getDefaultFigure
 .. java:method:: @Override public IFigure getDefaultFigure()
    :outertype: GenericBoardElement
 
-   Geter default figure sa default steka
+   Returns the default figure off the default stack
 
-   :return: Vraca default figuru ako default stek postoji, inace null
+   :return: The default figure if there is a default stack, else null
 
 getDefaultStack
 ^^^^^^^^^^^^^^^
@@ -106,9 +106,9 @@ getDefaultStack
 .. java:method:: @Override public IFigureStack getDefaultStack()
    :outertype: GenericBoardElement
 
-   Geter default steka (prvi element, index 0)
+   Returns the default stack (the first element, i.e. with the index of 0)
 
-   :return: Trazeni stack ako postoji, inace null
+   :return: Desired stack if it exists, else null
 
 getFigureStacks
 ^^^^^^^^^^^^^^^
@@ -116,10 +116,10 @@ getFigureStacks
 .. java:method:: @Override public IFigureStack getFigureStacks(String name)
    :outertype: GenericBoardElement
 
-   Vraca trazeni stek po imenu
+   Returns the desired figure stack name-wise
 
-   :param name: Naziv figure
-   :return: Trazeni stek
+   :param name: Figure name
+   :return: Desired stack
 
 getFigureStacks
 ^^^^^^^^^^^^^^^
@@ -127,9 +127,9 @@ getFigureStacks
 .. java:method:: @Override public List<IFigureStack> getFigureStacks()
    :outertype: GenericBoardElement
 
-   Geter za listu stekova figura
+   Returns the list of figure stacks
 
-   :return: Trazenu listu
+   :return: Desired list
 
 getUniqueName
 ^^^^^^^^^^^^^
@@ -137,9 +137,9 @@ getUniqueName
 .. java:method:: @Override public String getUniqueName()
    :outertype: GenericBoardElement
 
-   Geter za jedinstveno ime
+   Returns the unique name
 
-   :return: Vraca trazeno ime
+   :return: Desired unique name
 
 isVisited
 ^^^^^^^^^
@@ -147,9 +147,9 @@ isVisited
 .. java:method:: @Override public boolean isVisited()
    :outertype: GenericBoardElement
 
-   Proverava da li je posecen bord element
+   Checks whether an element has been visited
 
-   :return: False ako nije, inace true
+   :return: True if it has, else false
 
 render
 ^^^^^^
@@ -157,10 +157,12 @@ render
 .. java:method:: @Override public void render(Graphics2D g, Point origin, Point extent)
    :outertype: GenericBoardElement
 
-   render draws board element between originX, orignY and originX+extentX and originY+extentY. Clipping is not enforced! Rendering is performed by rendering its own visual presenter and then calling render method on all stacks
+   The renderer draws a board element between originX, originY and originX+extentX and originY+extentY.
+   Clipping is not enforced! Rendering is performed by rendering its own visual presenter
+   and then calling the render method on all stacks.
 
-   :param g: Graphics element on which to draw
-   :param origin: topLeft coordinate from which to draw inside g
+   :param g: Graphics element to be drawn on
+   :param origin: topLeft coordinate, the starting point for drawing inside g
    :param extent: size of the allocated drawing area, but not limited to it (no clipping)
 
 setUniqueName
@@ -169,9 +171,9 @@ setUniqueName
 .. java:method:: @Override public void setUniqueName(String name)
    :outertype: GenericBoardElement
 
-   Zadaje jedinstveno ime
+   Assigns a unique name
 
-   :param name: Ime board elementa
+   :param name: Name of the element
 
 setVisited
 ^^^^^^^^^^
@@ -179,7 +181,7 @@ setVisited
 .. java:method:: @Override public void setVisited(boolean visited)
    :outertype: GenericBoardElement
 
-   Postavlja flag posecenosti
+   Sets the visitation flag
 
-   :param visited: False ako nije, inace true
+   :param visited: True if it has been visited, else false
 

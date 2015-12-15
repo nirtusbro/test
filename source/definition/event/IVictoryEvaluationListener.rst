@@ -8,7 +8,7 @@ IVictoryEvaluationListener
 
 .. java:type:: public interface IVictoryEvaluationListener
 
-   Created by hades-incarante on 10/26/2015. Interfejs za event listener za victory resolver.
+   An interface for the event listener for the victory resolver.
 
 Methods
 -------
@@ -18,10 +18,10 @@ evaluateVictory
 .. java:method::  ResolutionAction[] evaluateVictory(IGameEngine gameEngine, IBoard board, IPlayer player, ResolutionAction[] currentResolutionSet)
    :outertype: IVictoryEvaluationListener
 
-   Event koji game engine poziva ako je prethodni resolver zahtevao proveru stanja pobede, racuna se kao deo trenutnog poteza
+   The event that the game engine calls if the previous resolver required checking if there is a winner, counts as part of the current move
 
-   :param gameEngine: gameEngine koji kontrolise igru
-   :param board: instanca boarda na kojem se igra
-   :param player: igrac koji pomera figuru
-   :return: spisak akcija koje game engine treba da izvrsi kao posledicu ovog poteza, osnova za zurnal
+   :param gameEngine: The gameEngine which controlls the game
+   :param board: The board on which the game is played
+   :param player: The player who is moving the figure
+   :return: A list of actions the game engine should do as a result of this move
 

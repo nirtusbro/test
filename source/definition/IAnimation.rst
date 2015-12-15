@@ -6,5 +6,5 @@ IAnimation
 
 .. java:type:: public interface IAnimation
 
-   Created by hades-incarnate on 10/23/2015. definise animaciona pravila koja ce renderable objekat odvesti sa tacke A na B
+   Defines animation rules that will take a renderable object from point A to point B
 

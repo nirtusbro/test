@@ -10,7 +10,7 @@ IGameDefinition
 
 .. java:type:: public interface IGameDefinition
 
-   Created by hades-incarnate on 10/20/2015. Ovaj interfejse se ne implementira u API-u, njega implementira kreator igrice i instancu prosledjuje u game-engine
+   
 
 Methods
 -------
@@ -20,9 +20,9 @@ getBackground
 .. java:method::  BufferedImage getBackground()
    :outertype: IGameDefinition
 
-   Slika koja ce biti pozadina board igrice
+   Sets the image which will be the game's background
 
-   :return: Ucitana slika
+   :return: The background image
 
 getBoard
 ^^^^^^^^
@@ -30,9 +30,9 @@ getBoard
 .. java:method::  IBoard getBoard()
    :outertype: IGameDefinition
 
-   Deklaracije boarda na kojem se igra
+   Declaration of the board on which the game will be played
 
-   :return: Board
+   :return: The board
 
 getPlayers
 ^^^^^^^^^^
@@ -40,7 +40,7 @@ getPlayers
 .. java:method::  List<IPlayer> getPlayers()
    :outertype: IGameDefinition
 
-   Inicijalna formacija igraca koji zapocinju igru
+   The initial formation of all the players that will start the game
 
-   :return: Niz igraca
+   :return: A list of players
 

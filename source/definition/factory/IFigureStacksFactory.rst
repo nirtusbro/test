@@ -8,7 +8,7 @@ IFigureStacksFactory
 
 .. java:type:: public interface IFigureStacksFactory
 
-   Created by hades-incarnate on 11/2/2015. Fabrika stackova elemenata
+   Figure stack factory
 
 Methods
 -------
@@ -18,10 +18,10 @@ createFigureStack
 .. java:method::  List<IFigureStack> createFigureStack(IBoard board, IBoardElement boardElement, Object payload)
    :outertype: IFigureStacksFactory
 
-   Fabrika za kreiranje stackova elemenata
+   The factory for creating figure stacks
 
-   :param board: board na kome se kreira stack
-   :param boardElement: board element na kome se kreira stack
-   :param payload: custom objekat koji pomaze u kreiranju
-   :return: Novi figure stack
+   :param board: The board on which the stack is created
+   :param boardElement: The board element on which the stack is created
+   :param payload: A custom object that helps in creating the factory
+   :return: The new figure stack
 

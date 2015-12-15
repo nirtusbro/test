@@ -16,7 +16,6 @@ GameEngine
 
 .. java:type:: public final class GameEngine implements IGameEngine
 
-   Created by hades-incarnate on 10/30/2015. Prva generic verzija
 
 Constructors
 ------------
@@ -26,9 +25,7 @@ GameEngine
 .. java:constructor:: public GameEngine(JPanel playArea)
    :outertype: GameEngine
 
-   Konstruktor
-
-   :param playArea: panel na kome se nalazi igra i svi njeni elementi (figure, board, karte... )
+   :param playArea: The panel which contains the game and all its elements
 
 Methods
 -------
@@ -38,9 +35,9 @@ addBoardClickResolutionListener
 .. java:method:: @Override public void addBoardClickResolutionListener(IBoardClickResolutionListener boardClickResolutionListener)
    :outertype: GameEngine
 
-   Metod za dodavanje listenera koji reaguje na klik misem na board
+   Adds a listener that reacts to mouse clicks on the board
 
-   :param boardClickResolutionListener: listener koji se dodaje
+   :param boardClickResolutionListener: The listener to be added
 
 addMoveResolutionListener
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -48,9 +45,9 @@ addMoveResolutionListener
 .. java:method:: @Override public void addMoveResolutionListener(IMoveResolutionListener moveResolutionListener)
    :outertype: GameEngine
 
-   Metod za dodavanje listenera koji reaguje na pomeranje figure na tabli
+   Adds a listener that reacts to figure moves on the board
 
-   :param moveResolutionListener: listener koji se dodaje
+   :param moveResolutionListener: The listener to be added
 
 addPlayer
 ^^^^^^^^^
@@ -58,10 +55,10 @@ addPlayer
 .. java:method:: @Override public IPlayer addPlayer(IPlayer playerDef)
    :outertype: GameEngine
 
-   Metod odavanje novog igraca
+   Adds a new player during the game
 
-   :param playerDef: igrac koji se dodaje
-   :return: dodat igrac
+   :param playerDef: The player to be added
+   :return: The added player
 
 addVictoryEvaluationListener
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -69,9 +66,9 @@ addVictoryEvaluationListener
 .. java:method:: @Override public void addVictoryEvaluationListener(IVictoryEvaluationListener victoryEvaluationListener)
    :outertype: GameEngine
 
-   Metod za dodavanje listenera koji se izvrasava na kraju svakog poteza i proverava da li ima pobednika u igri
+   Adds a listener which is called by the API user and checks whether there is a winner in the game. To be called only if one of the previous resolvers requires it, in which case all the moves prior to this one are applied to the game, so that this event could determine the winner based on the move played. This event isn't mandatory, any resolver can return ActionEnum.DeclareVictory.
 
-   :param victoryEvaluationListener: listener koji se dodaje
+   :param victoryEvaluationListener: Listener to be added
 
 getBoard
 ^^^^^^^^
@@ -79,13 +76,19 @@ getBoard
 .. java:method:: public IBoard getBoard()
    :outertype: GameEngine
 
+   Returns the currently selected element
+
+   :return: The selected element, null if nonexistent
+
 getPlayers
 ^^^^^^^^^^
 
 .. java:method:: public ArrayList<IPlayer> getPlayers()
    :outertype: GameEngine
 
-   Potrebno videti sa miljanom
+   Returns all players
+
+   :return: A list of all players
 
 removePlayer
 ^^^^^^^^^^^^
@@ -93,9 +96,9 @@ removePlayer
 .. java:method:: @Override public void removePlayer(IPlayer player)
    :outertype: GameEngine
 
-   Metod za uklanjanje igraca
+   Removes the specified player
 
-   :param player: igrac koji se uklanja
+   :param player: The player to be removed
 
 restartGame
 ^^^^^^^^^^^
@@ -103,7 +106,7 @@ restartGame
 .. java:method:: @Override public void restartGame() throws OperationNotSupportedException
    :outertype: GameEngine
 
-   Metod za ponovno pokretanje igre, posle zavrsetka prosle
+   Restarts the game, after the last one is finished
 
 setupGame
 ^^^^^^^^^
@@ -111,9 +114,11 @@ setupGame
 .. java:method:: @Override public void setupGame(IGameDefinition gameDef)
    :outertype: GameEngine
 
-   Postavljanje igre
+Declares a setup for the game, must be called before the beggining of the game.
 
-   :param gameDef: definicija igre koju kreira korisnik
+   :param gameDef: The definition of the game
+
+   **See also:** :java:ref:`IGameDefinition`
 
 startGame
 ^^^^^^^^^
@@ -121,5 +126,5 @@ startGame
 .. java:method:: @Override @SuppressWarnings public void startGame()
    :outertype: GameEngine
 
-   Metod za pocetak igrica, zapocinje se render cycle //dodace se jos
+   Start the game. To be called after the game is defined completely. Starts the render cycle.
 

@@ -6,8 +6,8 @@ IBoard
 
 .. java:type:: public interface IBoard extends IMetadataCore, IRenderable
 
-   Created by hades-incarnate on 10/20/2015. INterface deklaracija zborda koji ce biti implementiran kao povezani graf. Nasledjene varijante tog core baorda mogu da implementiraju specificne boardove kao sto je sahovska tabla.
-
+   Interface declaration of Board which is implemented as a connected graph.
+   
 Methods
 -------
 addBoardElement
@@ -16,21 +16,21 @@ addBoardElement
 .. java:method::  IBoardElement addBoardElement(IBoardElement elem)
    :outertype: IBoard
 
-   Dodavanje board elementa
+   Adds a board element
 
-   :param elem: Element koji se dodaje
-   :return: Dodati element
+   :param elem: Element to be added
+   :return: Added element
 
 addBoardElements
 ^^^^^^^^^^^^^^^^
 
 .. java:method::  List<IBoardElement> addBoardElements(List<IBoardElement> elems)
    :outertype: IBoard
+   
+   Adds a list of board elements
 
-   Dodavanje liste board elemenata
-
-   :param elems: Lista elemenata koji se dodaju
-   :return: Dodate elemente
+   :param elems: A list of elements to be added
+   :return: Added elements
 
 connectAllElements
 ^^^^^^^^^^^^^^^^^^
@@ -38,9 +38,9 @@ connectAllElements
 .. java:method::  void connectAllElements(Map<IBoardElement, Map<IBoardElement, Integer>> connectionMap)
    :outertype: IBoard
 
-   Spajanje svih elemenata
+   Connects all elements
 
-   :param connectionMap: Mapa elemenata
+   :param connectionMap: A map of elements
 
 connectElements
 ^^^^^^^^^^^^^^^
@@ -48,11 +48,11 @@ connectElements
 .. java:method::  void connectElements(IBoardElement elemStart, IBoardElement elemEnd, int cost)
    :outertype: IBoard
 
-   Spajanje elemenata
+   Connects elements
 
-   :param elemStart: Pocetak
-   :param elemEnd: Kraj
-   :param cost: Tezina izmedju njih
+   :param elemStart: First element
+   :param elemEnd: Last element
+   :param cost: The cost between them
 
 connectElements
 ^^^^^^^^^^^^^^^
@@ -60,12 +60,12 @@ connectElements
 .. java:method::  void connectElements(IBoardElement elemStart, IBoardElement elemEnd, int costForward, int costBackward)
    :outertype: IBoard
 
-   Spajanje elemenata sa razlicitim tezinama po smerovima
+   Connecting elements with different costs depending on the direction
 
-   :param elemStart: Pocetak
-   :param elemEnd: Kraj
-   :param costForward: Tezina u smeru pocetak->kraj
-   :param costBackward: Tezina u smeru kraj->pocetak
+   :param elemStart: Starting element
+   :param elemEnd: Ending
+   :param costForward: Cost in the beggining->end direction
+   :param costBackward: Cost in the end->beggining direction
 
 getAllElements
 ^^^^^^^^^^^^^^
@@ -73,9 +73,9 @@ getAllElements
 .. java:method::  List<IBoardElement> getAllElements()
    :outertype: IBoard
 
-   Vraca sve elemente grafa
+   Returns all the elements of the graph
 
-   :return: Lista elemenata
+   :return: A list of elements
 
 getAllElementsForCost
 ^^^^^^^^^^^^^^^^^^^^^
@@ -84,10 +84,11 @@ getAllElementsForCost
    :outertype: IBoard
 
    Pronalazi i vraca sve elemente zadate tezine
+   Looks for and returns all elements of a given cost
 
-   :param root: Koren liste
-   :param exactCost: Tezina koja se trazi
-   :return: elementi Odredjene tezine
+   :param root: The list's root element
+   :param exactCost: The given cost
+   :return: A list of elements of a given cost
 
 getAllReachableElements
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -95,11 +96,11 @@ getAllReachableElements
 .. java:method::  List<IBoardElement> getAllReachableElements(IBoardElement root, int maxCost)
    :outertype: IBoard
 
-   Nalazi sve spojene elemente
+   Looks for all connected elements
 
-   :param root: Koren liste
-   :param maxCost: Najveca tezina
-   :return: Sve spojene elemente
+   :param root: The list's root element
+   :param maxCost: Maximum cost
+   :return: A list of elements that are connected
 
 getShortestPath
 ^^^^^^^^^^^^^^^
@@ -107,9 +108,9 @@ getShortestPath
 .. java:method::  List<IBoardElement> getShortestPath(IBoardElement start, IBoardElement target)
    :outertype: IBoard
 
-   Nalazi najkraci put izmedju elemenata
+   Looks for the shortest path between two elements
 
-   :param start: Pocetak
-   :param target: Cilj
-   :return: Najkraci put
+   :param start: First element
+   :param target: Last element
+   :return: The shortest path
 

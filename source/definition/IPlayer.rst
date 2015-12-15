@@ -6,7 +6,7 @@ IPlayer
 
 .. java:type:: public interface IPlayer extends IMetadataCore
 
-   Created by hades-incarnate on 10/20/2015.
+   
 
 Methods
 -------
@@ -16,9 +16,9 @@ getName
 .. java:method::  String getName()
    :outertype: IPlayer
 
-   Vraca ime igraca
+   Returns the player's name
 
-   :return: Ime igraca
+   :return: Player name
 
 setName
 ^^^^^^^
@@ -26,7 +26,7 @@ setName
 .. java:method::  void setName(String value)
    :outertype: IPlayer
 
-   Postavlja ime igraca
+   Sets the player's name
 
-   :param value: Zadato ime
+   :param value: Name to be set
 

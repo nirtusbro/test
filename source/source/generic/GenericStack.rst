@@ -12,7 +12,7 @@ GenericStack
 
 .. java:type:: public class GenericStack extends RenderableMetadataContainer implements IFigureStack
 
-   Created by djura on 31-Oct-15. Genericki stack figura kog ce nasledjivati svi buduci stackovi
+   Generic figure stack
 
 Methods
 -------
@@ -22,11 +22,11 @@ addFigure
 .. java:method:: @Override public IFigure addFigure(IFigure figure, String name)
    :outertype: GenericStack
 
-   Dodavanje figure u listu
+   Adds a figure
 
-   :param figure: Figura koja se dodaje
-   :param name: Ime figure koja se dodaje
-   :return: Dodatu figuru
+   :param figure: Figure to be added
+   :param name: Name of said figure
+   :return: Added figure
 
 addFigures
 ^^^^^^^^^^
@@ -34,10 +34,10 @@ addFigures
 .. java:method:: @Override public List<IFigure> addFigures(List<IFigure> figures)
    :outertype: GenericStack
 
-   Dodavanje liste figura u listu
+   Adds a list of figures
 
-   :param figures: Lista figura koja se dodaje
-   :return: dodate Figure
+   :param figures: Figure list to be added
+   :return: Added figures
 
 getDefaultFigure
 ^^^^^^^^^^^^^^^^
@@ -45,16 +45,20 @@ getDefaultFigure
 .. java:method:: @Override public IFigure getDefaultFigure()
    :outertype: GenericStack
 
+   Returns the default figure
+
+   :return: Default figure
+
 getFigure
 ^^^^^^^^^
 
 .. java:method:: @Override public IFigure getFigure(String name)
    :outertype: GenericStack
 
-   Uzimanje figure iz liste
+   Returns the desired figure by name
 
-   :param name: Ime trazene figure
-   :return: Trazenu figuru
+   :param name: Name of desired figure
+   :return: Desired figure
 
 getFigures
 ^^^^^^^^^^
@@ -62,9 +66,9 @@ getFigures
 .. java:method:: @Override public List<IFigure> getFigures()
    :outertype: GenericStack
 
-   Vraca figura iz liste
+   Returns figures from a list
 
-   :return: Trazene figure
+   :return: Desired figures
 
 getName
 ^^^^^^^
@@ -72,15 +76,19 @@ getName
 .. java:method:: @Override public String getName()
    :outertype: GenericStack
 
+   Returns the name of the desired stack
+
+   :return: Stack name
+
 hasFigures
 ^^^^^^^^^^
 
 .. java:method:: @Override public boolean hasFigures()
    :outertype: GenericStack
 
-   Da li sadrzi figure
+   Checks whether a stack contains any figures
 
-   :return: False ako nije prazno
+   :return: True if yes, else false
 
 render
 ^^^^^^
@@ -88,10 +96,12 @@ render
 .. java:method:: @Override public void render(Graphics2D g, Point origin, Point extent)
    :outertype: GenericStack
 
-   render draws stack between originX, orignY and originX+extentX and originY+extentY. Clipping is not enforced! Rendering is performed by rendering its own visual presenter and then calling render method on all figures
+   The renderer draws a stack between originX, originY and originX+extentX and originY+extentY.
+   Clipping is not enforced! Rendering is performed by rendering its own visual presenter
+   and then calling the render method on all figures
 
-   :param g: Graphics element on which to draw
-   :param origin: topLeft coordinate from which to draw inside g
+   :param g: Graphics element to be drawn on
+   :param origin: topLeft coordinate, the starting point for drawing inside g
    :param extent: size of the allocated drawing area, but not limited to it (no clipping)
 
 setName
@@ -100,3 +110,6 @@ setName
 .. java:method:: @Override public void setName(String name)
    :outertype: GenericStack
 
+    Sets the name of the desired figure
+
+    :param name: Desired name
